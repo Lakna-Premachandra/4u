@@ -192,6 +192,54 @@ ul li:hover .dropdown {
   cursor: pointer;
 }
 
+footer {
+  height: 300px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: var(--buttons);
+}
+span {
+  font-weight: 100;
+}
+
+.footer-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12rem;
+}
+.footer-card a {
+  color: black;
+  font-size: 1rem;
+  list-style: disc;
+}
+
+#bx {
+  font-size: 3rem;
+}
+#social li a {
+  padding: 1rem;
+}
+.list-footer li a {
+  line-height: 28px;
+}
+.list-footer li a:hover {
+  font-weight: bold;
+}
+
+#social {
+  display: flex;
+}
+
+#arrow {
+  font-size: 3rem;
+  margin-left: 5rem;
+}
+#arrow:hover {
+  color: brown;
+}
+
 @keyframes slide {
   25% {
     background-image: linear-gradient(rgba(0, 0, 0, 0.27), rgba(0, 0, 0, 0.67)),

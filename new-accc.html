@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- The document type declaration and the opening of the HTML document. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta tags specifying character encoding and viewport settings. -->
+    <title>Document</title>
+    <!-- The title of the document displayed in the browser tab. -->
+    <link rel="stylesheet" href="new-acc.css" />
+    <!-- Link to an external CSS stylesheet for styling. -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Link to an external CSS stylesheet for icons from Boxicons. -->
+  </head>
+  <body>
+    <!-- The beginning of the HTML body. -->
+
+    <div class="container-login-page">
+      <!-- Container for the login page content. -->
+
+      <div class="logo">
+        <!-- Container for the logo image. -->
+
+        <img src="images/4ulk.png" alt="" />
+
+        <!-- Image element with the logo. -->
+      </div>
+
+      <div class="box-login">
+        <!-- Container for the login box. -->
+
+        <h1>Create an Account</h1>
+        <!-- Heading indicating a welcome message. -->
+        <h3>Have an acc<a id="account" href=""> sign in</a></h3>
+        <!-- Heading with a sign-in message and a link to create an account. -->
+        <input
+          type="name"
+          placeholder="First name"
+          name="First name"
+          required
+          id="email"
+        />
+        <input
+          type="name"
+          placeholder="Last name"
+          name="Last name"
+          required
+          id="email"
+        />
+        <input
+          type="email"
+          placeholder="Email or Username"
+          name="email"
+          required
+          id="email"
+        />
+        <input
+          id="rr"
+          type="password"
+          placeholder="Password"
+          name="Password"
+          required
+          id="password"
+        />
+
+        <!-- Input field for email or username. -->
+
+        <!-- Button to continue the login process. -->
+        <hr />
+
+        <p>
+          By Creating an account, <br />
+          you agree to our User Agreement and acknowledge reading our User
+          Privacy Notice .
+        </p>
+        <button id="continue">Create account</button>
+      </div>
+    </div>
+    <script>
+      const alt = document.getElementById("continue");
+
+      alt.addEventListener("click", Alert);
+     
+
+      function Alert() {
+        alert("Welcome to 4YOU ");
+      }
+
+    </script>
+  </body>
+</html>

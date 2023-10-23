@@ -9,7 +9,7 @@
 }
 
 :root {
-  --back-color: #dbdbdb;
+  --back-color: #ebebeb;
   --a-color: rgb(153, 114, 16);
   --list-color: rgb(43, 43, 43);
   --shadow: rgb(101, 101, 101);
@@ -18,11 +18,12 @@
 
 body {
   background-color: var(--back-color);
+  overflow-x: hidden;
 }
 #active-home li a {
   color: rgb(242, 160, 8);
 }
-
+/**/
 .bx-menu {
   position: absolute;
   right: 10px;
@@ -32,20 +33,31 @@ body {
 }
 
 /*header section styles*/
+
+header{
+  position: sticky;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+}
 .header-1 {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   background-color: var(--buttons);
-  padding: 0.5rem;
+  padding:1rem;
   position: relative;
 }
-.header-2 {
-  width: 100%;
+ 
+.header-2{
   display: flex;
   justify-content: center;
-  padding: 0.5rem 0;
+  align-items: center;
+  background-color: #ebebeb;
+  width: 100%;
+  padding: 0.7rem;
 }
 
 #list-2 {
@@ -66,6 +78,10 @@ body {
 .search {
   position: relative;
   margin-left: 40rem;
+}
+
+.tem{
+  display: none;
 }
 .search input {
   font-size: 0.8rem;
@@ -91,6 +107,17 @@ body {
   padding: 0.4rem;
 }
 
+.navbar-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.navbar-icon h5{
+
+  color: black;
+  font-size: 1rem;
+}
 .bx-user-plus:hover {
   background-color: orange;
   border-radius: 60px;
@@ -105,6 +132,7 @@ body {
   width: 35px;
   background-color: black;
   border-radius: 200px;
+  padding: 0.5rem;
 }
 #list-2 a {
   font-size: 0.7rem;
@@ -356,7 +384,7 @@ s .button-quantity {
 
 /*section-3 styles*/
 .cart {
-  height: 1400px;
+  height: auto;
 }
 
 .cart-1 {
@@ -365,21 +393,36 @@ s .button-quantity {
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
+#discount{
+
+  text-decoration: line-through;
+}
 .cards {
-  height: 350px;
-  text-align: center;
+  height: 330px;
+  text-align: left;
   width: 200px;
   gap: 3rem;
   border-radius: 10px;
   margin-bottom: 5rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  background-color: rgb(211, 211, 211);
-  border: 1px solid grey;
+  background-color: #f5f5f5;
+  border: 1px solid rgb(153, 153, 153);
   padding: 1rem;
   position: relative;
+  overflow: auto;
+}
+span{
+  color: rgb(247, 46, 46);
+  
+
+}
+
+.cards::-webkit-scrollbar{
+  display: none;
 }
 
 .cards:hover {
@@ -388,11 +431,15 @@ s .button-quantity {
   box-shadow: rgba(0, 0, 0, 0.65) 0px 5px 15px;
 }
 
-.cart h1 {
-  color: rgb(36, 36, 36);
+.cart {
   text-align: center;
-  margin-bottom: 3rem;
-  font-size: 2rem;
+}
+.cards h1 {
+  color: rgb(36, 36, 36);
+  text-align: left;
+  margin-bottom: 1.3rem;
+
+
 }
 .cards h2 {
   color: rgb(54, 54, 54);
@@ -422,21 +469,21 @@ s .button-quantity {
   transition: 0.4s;
 }
 
-.bx-cart-alt {
-  font-size: 1.5rem;
+.bxs-discount {
+  font-size: 1.7rem;
   top: 0;
   right: 0;
   padding: 0.5rem;
   position: absolute;
-  background-color: var(--buttons);
+  background-color: rgb(247, 46, 46);
   border-radius: 0px;
   border-top-right-radius: 10px;
+  color: white;
 }
 
 .bx-cart-alt:hover {
   background-color: rgb(255, 179, 0);
   cursor: pointer;
-  transform: rotate(50deg);
 }
 .cards img {
   height: 160px;
@@ -525,7 +572,7 @@ span {
   
 
   .cards {
-    height: 340px;
+    height: auto;
     width: 190px;
     gap: 3rem;
     
@@ -555,9 +602,7 @@ span {
 }
 
 @media (max-width: 1650px) {
-  #cart{
-    height: 1400px;
-  }
+
   .footer-card a {
     color: black;
     font-size: 0.9rem;
@@ -641,7 +686,7 @@ span {
   }
  
   .cards {
-    height: 330px;
+    height: auto;
     width: 180px;
     gap: 3rem;
     
@@ -671,11 +716,7 @@ span {
   
 }
 
-@media(max-width:1565px){
-  #cart{
-    height: 1800px;
-  }
-}
+
 @media (max-width: 1496px) {
 
   #bx {
@@ -760,7 +801,7 @@ span {
   }
 
   .cards {
-    height: 320px;
+   
     width: 170px;
     gap: 2.5rem;
     
@@ -839,7 +880,7 @@ span {
   }
 
   .cards {
-    height: 330px;
+   
 
     width: 200px;
   }
@@ -886,7 +927,7 @@ span {
   }
   
   .cards {
-    height: 310px;
+
 
     width: 190px;
   }
@@ -894,9 +935,7 @@ span {
     height: 140px;
     width: 100%;
   }
-  .cart {
-    height: 1350px;
-  }
+
   .bx-user-plus:hover {
    margin: 0;
     padding: 0;
@@ -926,9 +965,7 @@ span {
 }
 @media(max-width:1237px) {
   
-  #cart{
-    height: 2200px;
-  }
+
 }
 @media (max-width: 1221px) {
   #list-2 a {
@@ -952,7 +989,7 @@ span {
   }
 
 .cards {
-  height: 300px;
+ 
 
   width: 180px;
   padding: 0.2rem;
@@ -963,9 +1000,7 @@ span {
     height: 130px;
     width: 100%;
   }
-  #cart {
-    height: 1800px;
-  }
+ 
   .dropdown {
     width: 120px;
     height: 280px;
@@ -1021,7 +1056,7 @@ span {
     font-size: 1.1rem;
    }
 }
-
+/* 
 @media (max-width: 1061px) {
   .cards {
     height: 270px;
@@ -1056,16 +1091,10 @@ span {
   .cart h1 {
     font-size: 1.2rem;
   }
-  #cart {
-    height: 2000px;
-  }
-}
 
-@media (max-width:850px) {
-  #cart{
-    height: 2500px;
-  }
-}
+} */
+
+
 @media (max-width: 1000px) {
   #list-2 {
     flex-direction: column;
@@ -1094,23 +1123,46 @@ span {
     display: none;
   }
 
+  .tem{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tem input{
+    padding: 0.8rem 2rem;
+    border: none;
+    outline: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:10px ;
+    width: 300px;
+  }
+
+  .tem button{
+
+    padding: 0.8rem 1rem;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:10px ;
+  }
+
+
+  /* #search-mobile{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+  } */
+
   .cover-image{
     display: flex;
     justify-content: center;
     align-items: center;
   }
- 
-  #search-mobile{
-    display: block;
-  }
-#search-mobile input{
-  width: 600px;
-  padding: 1rem;
-  background: rgb(245,245,245);
-  background: linear-gradient(90deg, rgba(245,245,245,1) 12%, rgba(224,186,66,1) 68%);
-  border-radius: 40px;
-  margin:0 1rem 0 -15rem;
-}
+
+
 
 #smobile{
   padding: 0.7rem 2rem;
@@ -1178,7 +1230,6 @@ span {
   #search-mobile input{
     width: 450px;
     padding: 1rem;
-    margin:0 1rem 0 -15rem;
   }
   
   #smobile{
@@ -1257,7 +1308,6 @@ span {
     #search-mobile input{
       width: 300px;
       padding: 0.5rem;
-      margin:0 1rem 0 -15rem;
     }
     
     #smobile{
@@ -1320,9 +1370,7 @@ span {
   
 
 @media(max-width:547px) {
- #cart{
-  height: 3100px;
- }
+
 }
   @media(max-width:480px){
   
@@ -1351,9 +1399,7 @@ span {
           width: 100%;
          
         }
-        .cart{
-          height: 2430px;
-        }
+    
         .list-footer h2{
           font-size: 0.8rem;
          }
@@ -1378,14 +1424,9 @@ span {
      .cart-1{
       gap: 0.5rem;
      }
-     #cart{
-      height: 3000px;
-     }
+   
       
   }
   @media(max-width:360px){
   
-    #cart{
-      height: 5800px;
-     }
   }
